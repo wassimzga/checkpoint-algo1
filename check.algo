@@ -1,0 +1,23 @@
+ALGORITHM algo1
+VAR
+    VAR phrase: STRING;
+    VAR voyelle: (a,e,o,u,i,y);
+    VAR word : INTEGER :=0;
+    VAR nb_voyelle : INTEGER:=0
+BEGIN
+    write(phrase);
+    read(phrase);
+    FOR i FROM 0 TO phrase.length-1  DO
+        IF (phrase[i]== " ") THEN
+        word=word+1;
+            
+        END_IF
+        IF (phrase[i]== voyelle) THEN
+            nb_voyelle = nb_voyelle+1;
+        END_IF
+    END_FOR
+
+    write("The length of the sentence :" phrase(length) );
+    write("The number of words in the sentence :" word);
+    write("The number of vowels in the sentence :" nb_voyelle);
+END
